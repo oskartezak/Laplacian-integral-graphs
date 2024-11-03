@@ -1,1 +1,3 @@
 # Laplacian-integral-graphs
+
+We say that a graph is Laplacian integral if all its Laplacian eigenvalues are integers. We try to find as many as possible unicyclic and bicyclic graphs for which the Laplacian eigenvalues are integers. We apply an exhaustive search for graphs of small order, and apply some stochastic search for larger orders. We are trying to find a pattern/method for constructing Laplacian integral graphs.
