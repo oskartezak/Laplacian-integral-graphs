@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+
+
+\newcommand{\program}{Finančna matematika} % ime studijskega programa: Matematika/Finančna matematika
+\newcommand{\imeavtorja}{Oskar Težak, Sara Šega} % ime avtorja
+\newcommand{\imementorja}{doc. dr. Janoš Vidali} % akademski naziv in ime mentorja
+\newcommand{\imesomentorja}{prof. dr. Riste Škrekovski}
+\newcommand{\naslovdela}{Laplacian integral graphs}
+\newcommand{\letnica}{2024} %letnica 
+
+
+\begin{document}
+
+%naslovnica
+
+\thispagestyle{empty}
+\noindent{\large
+UNIVERZA V LJUBLJANI\\[1mm]
+FAKULTETA ZA MATEMATIKO IN FIZIKO\\[5mm]
+\program\ }
+\vfill
+
+\begin{center}{\large
+\imeavtorja\\[2mm]
+{\bf \naslovdela}\\[10mm]
+Skupinski projekt\\[2mm]
+Poročilo\\[1cm]
+Mentorja: \imementorja, \\ \imesomentorja\\[2mm]}
+\end{center}
+\vfill
+
+\noindent{\large
+Ljubljana, december \letnica}
+\pagebreak
+
+
+
+
+\section{Opis problema}
+
+Poiskati želimo čim več enocikličnih in dvocikličnih grafov, katerih Laplaceove lastne vrednosti so cela števila. 
+Za grafe nižjega reda to storimo z izčrpno metodo, za grafe višjega reda moramo uporabiti stohastično metodo. 
+Najti želimo metodo oz. vzorec za generiranje Laplaceovih celoštevilskih grafov. \\ 
+Naj bo $G(V,E)$ graf z množico vozlišč $V, \left| V \right| = n
+$ in množico povezav $E, \left| E \right| = m. $ \\
+Definiramo Laplaceovo matriko $ L = D - A $, kjer je $D$ $ n \times n $ diagonalna matrika, katere diagonalni členi so stopnje vozlišč grafa $G$, 
+$A$ pa je $ n \times n $ matrika sosednosti. Lastne vrednosti matrike $L$ so $ \lambda_1 \leq \lambda_2 \leq \dots \leq \lambda_n .$ Če so vse lastne
+vrednosti pozitivne, pravimo, da je graf $G$ z matriko $L$ Laplaceov celoštevilski. 
+%Značilnosti
+
+\section{Potek}
+Najprej sva napisala kodo za generiranje enocikličnih grafov, ki imajo relativno malo vozlišč. Uporabila sva dejstvo, da imajo povezani enociklični grafi enako
+število povezav in vozlišč. Implementirala sva funkcijo, ki za vsak graf potem preveri, če je Laplaceov in Laplaceove tudi izriše. Funkcijo sva testirala
+na grafih s 6, 7, 8, 9, 10 vozlišči. Za iskanje dvocikličnih grafov sva uporabila isto kodo, le da sva tokrat nastavila, da generirava grafe z $n$ vozlišči in $n+1$ povezavami.    
+
+
+
+
+\end{document}
