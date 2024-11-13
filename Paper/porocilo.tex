@@ -58,7 +58,17 @@ Najprej sva napisala kodo za generiranje enocikličnih grafov, ki imajo relativn
 število povezav in vozlišč. Implementirala sva funkcijo, ki za vsak graf potem preveri, če je Laplaceov in Laplaceove tudi izriše. Funkcijo sva testirala
 na grafih s 6, 7, 8, 9, 10 vozlišči. Za iskanje dvocikličnih grafov sva uporabila isto kodo, le da sva tokrat nastavila, da generirava grafe z $n$ vozlišči in $n+1$ povezavami.    
 
-
-
+\[
+\det(L - \lambda I) = 
+\begin{vmatrix}
+    n-k - \lambda &-1  &-1 &&\dots&&   -1&  \\
+    -1 & 2 - \lambda & -1&&&&  &  &  \\
+    -1&  -1 & \ddots &\ddots&&&  &  \\
+    &  &\ddots  & 2 - \lambda &&&&  &  \\
+    \vdots& &  &  &1 - \lambda &&  &  \\
+    &  &  &  &  &\ddots \\
+    -1& &  &  &  & &1 - \lambda \\
+\end{vmatrix}
+\]
 
 \end{document}
