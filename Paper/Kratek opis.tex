@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+
+\begin{document}
+
+\title{Laplacian integral graphs}
+\author{Oskar Težak, Sara Šega}
+
+\maketitle
+
+\section{Opis problema}
+
+Poiskati želimo čim več enocikličnih in dvocikličnih grafov, katerih Laplaceove lastne vrednosti so cela števila. 
+Za grafe nižjega reda to storimo z izčrpno metodo, za grafe višjega reda moramo uporabiti stohastično metodo. 
+Najti želimo metodo oz. vzorec za generiranje Laplaceovih celoštevilskih grafov. \\ 
+Naj bo $G(V,E)$ graf z množico vozlišč $V$, $ \left| V \right| = n $
+in množico povezav $E$, $\left| E \right| = m. $ \\
+Definiramo Laplaceovo matriko $ L = D - A $, kjer je $D$ $ n \times n $ diagonalna matrika, katere diagonalni členi so stopnje vozlišč grafa $G$, 
+$A$ pa je $ n \times n $ matrika sosednosti. Elementi Laplaceove matrike $L$ so torej
+
+\[
+l_{i,j} = 
+\begin{cases} 
+    \deg(v_i), & \text{če } i = j, \\
+    -1, & \text{če } i \neq j \text{ in } v_i \text{ je soseden z } v_j, \\
+    0, & \text{sicer}.
+\end{cases}
+\]
+
+Lastne vrednosti matrike $L$ so $ \lambda_1 \leq \lambda_2 \leq \dots \leq \lambda_n .$ Če so vse lastne
+vrednosti pozitivne, pravimo, da je graf $G$ z matriko $L$ Laplaceov celoštevilski. 
+
+
+\section{Potek dela}
+
+\subsection{Generiranje enocikličnih Laplaceovih celoštevilskih grafov}
+Najprej bova generirala povezane enociklične grafe (s pomočjo lastnosti, da imajo povezani enociklični grafi enako število vozlišč in povezav) in testirala, kateri izmed 
+njih so Laplaceovi celoštevilski. To bova storila za manjše grafe ( do 10 vozlišč). V prikazanih grafih bova poskusila poiskati vzorec oz. njihovo skupno lastnost,
+ki nam bi zagotovila, da je graf Laplaceov celoštevilski. \\
+
+\subsection{Generiranje dvocikličnih Laplaceovih celoštevilskih grafov}
+Na podoben način bova generirala manjše povezane dvociklične grafe (uporabila bova lastnost, da je število povezav za 1 večje od števila vozlišč) in spet poskusila
+ugotoviti lastnost, ki je skupna vsem dvocikličnim Laplaceovim celoštevilskim grafom. \\
+
+\subsection{Stohastično iskanje}
+Za večje grafe bova uporabila stohastično metodo za generiranje enocikličnih in dvocikličnih grafov z večjim številom vozlišč. 
+Cilj je poiskati nove Laplaceove celoštevilske grafe in preveriti, ali se vzorci, opaženi pri manjših grafih, ohranijo.\\
+
+\subsection{Dodatna analiza}
+Ker so Laplaceovi celoštevilski grafi redki, bova na koncu raziskala tudi grafe, ki imajo čim več celoštevilskih Laplaceovih lastnih vrednosti. 
+Tako bova lahko bolje razumela, katere lastnosti grafov vplivajo na delno celoštevilsko Laplaceovo spektralno lastnost.
+
+
+\end{document}
