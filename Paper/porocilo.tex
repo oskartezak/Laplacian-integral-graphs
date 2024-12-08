@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath, amssymb}
 \usepackage{amsthm}
+\usepackage{graphicx}
 
 
 \newcommand{\program}{Finančna matematika} % ime studijskega programa: Matematika/Finančna matematika
@@ -70,5 +71,27 @@ na grafih s 6, 7, 8, 9, 10 vozlišči. Za iskanje dvocikličnih grafov sva upora
     -1& &  &  &  & &1 - \lambda \\
 \end{vmatrix}
 \]
+
+\section{Generiranje enocikličnih Laplaceovih celoštevilskih grafov}
+Za generiranje povezanih enocikličnih grafov sva uporabila funkcijo $nauty$ $geng$ in dejstvo, da za povezane enociklične grafe velja, 
+da je njihovo število vozlišč enako številu povezav. S funkcijo $ is\_laplacian\_integer\_graph(G) $ sva potem preverjala, kateri izmed 
+enocikličnih grafov imajo celoštevilske Laplaceove lastne vrednosti. To sva uporabila na manjših grafih (do 10 vozlišč) in opazila, da so 
+Laplaceovi tisti, ki imajo eno vozlišče povezano z vsemi ostalimi, ena povezava pa je še med poljubnima dvema vozliščema.
+V splošnem bi njihova Laplaceova matrika bila $L=$
+\begin{bmatrix}
+    n-1 &-1  &-1 &&\dots&&   -1  \\
+    -1 & 2  & -1&&&&  &    \\
+    -1&  -1 & 2 &&&&  & \\
+    &  &  &1  &&&&    \\
+    \vdots &  &  & &  &\ddots \\
+    -1& &  &  &  & &1  \\.
+\end{bmatrix} \\
+Izjema sta bila le grafa: 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{izjema1.png}
+    \includegraphics[width=0.5\textwidth]{izjema2.png}
+   
+\end{figure}
 
 \end{document}
