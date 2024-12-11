@@ -1,6 +1,6 @@
-PWD c:\Users\user\Documents\Faks\3. LETNIK\FP\Laplacian-integral-graphs-6\Paper
+PWD c:\Users\user\Documents\Faks\3. LETNIK\FP\Laplacian-integral-graphs-7\Paper
 INPUT C:\Users\user\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\user\Documents\Faks\3. LETNIK\FP\Laplacian-integral-graphs-6\Paper\porocilo.tex
+INPUT c:\Users\user\Documents\Faks\3. LETNIK\FP\Laplacian-integral-graphs-7\Paper\porocilo.tex
 OUTPUT porocilo.log
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -267,6 +267,13 @@ INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0700.tfm
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0500.tfm
+INPUT .\primer_6.png
+INPUT .\primer_6.png
+INPUT primer_6.png
+INPUT .\primer_6.png
+INPUT .\primer_6.png
+INPUT .\primer_6.png
+INPUT .\primer_6.png
 INPUT .\izjema1.png
 INPUT .\izjema1.png
 INPUT izjema1.png
@@ -281,6 +288,10 @@ INPUT .\izjema2.png
 INPUT .\izjema2.png
 INPUT .\izjema2.png
 INPUT .\izjema2.png
+INPUT .\primer_6.png
+INPUT .\primer_6.png
+INPUT primer_6.png
+INPUT .\primer_6.png
 INPUT porocilo.aux
 INPUT C:\Users\user\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\user\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk

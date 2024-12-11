@@ -55,9 +55,10 @@ vrednosti pozitivne, pravimo, da je graf $G$ z matriko $L$ Laplaceov celoštevil
 %Značilnosti
 
 \section{Potek}
-Najprej sva napisala kodo za generiranje enocikličnih grafov, ki imajo relativno malo vozlišč. Uporabila sva dejstvo, da imajo povezani enociklični grafi enako
-število povezav in vozlišč. Implementirala sva funkcijo, ki za vsak graf potem preveri, če je Laplaceov in Laplaceove tudi izriše. Funkcijo sva testirala
-na grafih s 6, 7, 8, 9, 10 vozlišči. Za iskanje dvocikličnih grafov sva uporabila isto kodo, le da sva tokrat nastavila, da generirava grafe z $n$ vozlišči in $n+1$ povezavami.    
+Še dopisat.
+%Najprej sva napisala kodo za generiranje enocikličnih grafov, ki imajo relativno malo vozlišč. Uporabila sva dejstvo, da imajo povezani enociklični grafi enako
+%število povezav in vozlišč. Implementirala sva funkcijo, ki za vsak graf potem preveri, če je Laplaceov in Laplaceove tudi izriše. Funkcijo sva testirala
+%na grafih s 6, 7, 8, 9, 10 vozlišči. Za iskanje dvocikličnih grafov sva uporabila isto kodo, le da sva tokrat nastavila, da generirava grafe z $n$ vozlišči in $n+1$ povezavami.    
 
 \[
 \det(L - \lambda I) = 
@@ -76,22 +77,42 @@ na grafih s 6, 7, 8, 9, 10 vozlišči. Za iskanje dvocikličnih grafov sva upora
 Za generiranje povezanih enocikličnih grafov sva uporabila funkcijo $nauty$ $geng$ in dejstvo, da za povezane enociklične grafe velja, 
 da je njihovo število vozlišč enako številu povezav. S funkcijo $ is\_laplacian\_integer\_graph(G) $ sva potem preverjala, kateri izmed 
 enocikličnih grafov imajo celoštevilske Laplaceove lastne vrednosti. To sva uporabila na manjših grafih (do 10 vozlišč) in opazila, da so 
-Laplaceovi tisti, ki imajo eno vozlišče povezano z vsemi ostalimi, ena povezava pa je še med poljubnima dvema vozliščema.
+Laplaceovi tisti, ki imajo eno centralno vozlišče, ki je del cikla, vsa vozlišča, ki niso del cikla, pa so tudi povezana s tem centralnim vozliščem. 
 V splošnem bi njihova Laplaceova matrika bila $L=$
 \begin{bmatrix}
-    n-1 &-1  &-1 &&\dots&&   -1  \\
+    n-k  &-1  &-1 &&\dots&&   -1  \\
     -1 & 2  & -1&&&&  &    \\
-    -1&  -1 & 2 &&&&  & \\
-    &  &  &1  &&&&    \\
-    \vdots &  &  & &  &\ddots \\
-    -1& &  &  &  & &1  \\.
-\end{bmatrix} \\
-Izjema sta bila le grafa: 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{izjema1.png}
-    \includegraphics[width=0.5\textwidth]{izjema2.png}
-   
-\end{figure}
+    -1&  -1 & \ddots &\ddots&&&  & \\
+    &  &\ddots  & 2 &&&&    \\
+    \vdots& &  &  &1  &&  & \\
+    &  &  &  &  &\ddots \\
+    -1& &  &  &  & &1 \\
+\end{bmatrix}, \\
+njihov graf pa bi izgledal takole (za št. vozlišč = 6):
 
+\includegraphics[width=0.5\textwidth]{primer_6.png}
+
+Izjema sta bila le grafa: \\
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{izjema1.png}
+    \end{minipage}%
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{izjema2.png}
+    \end{minipage}
+\\
+Za iskanje enocikličnih Laplaceovih celoštevilskih grafov z večjim številom vozlišč sva uporabila stohastično metodo. Najprej sva napisala funkcijo,
+ki generira enociklične grafe, nato pa sva s funkcijo $unicyclic\_laplacian\_integer\_graph\_stohastic$ preverila, kateri izmed njih so Laplaceovi celoštevilski. 
+Funkcijo sva testirala tako, da sva za grafe z 10 do 100 vozlišči generirala največ 10000 enocikličnih grafov in za te preverila, koliko je celoštevilskih Laplaceovih.
+Izkazalo se je, da ni bil nobeden.
+
+\section{Generiranje dvocikličnih Laplaceovih celoštevilskih grafov}
+Podobno kot pri enocikličnih grafih, sva tudi v tem primeru najprej ustvarila funkcijo, ki generira dvociklične grafe in jih potem testirala, če so celoštevilski 
+Laplaceovi. To funkcijo sva uporabila na grafih z majhnim številom vozlišč. 
+
+\includegraphics[width=0.5\textwidth]{primer_6.png} \\
+Za večje grafe sva uporabila stohastično metodo, in sicer sva najprej generirala dvociklične grafe (ustvarimo
+2 poljubna cikla in ju potem povežemo), potem pa preverjamo, ali imajo celoštevilske lastne vrednosti. Zopet se je po testiranju izkazalo, da so celoštevilski
+Laplaceovi grafi redki, saj med dvocikličnimi grafi z 10 do 100 vozlišči, ni bilo nobenega.
 \end{document}

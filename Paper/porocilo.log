@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.22)  8 DEC 2024 22:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.22)  11 DEC 2024 23:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/user/Documents/Faks/3. LETNIK/FP/Laplacian-integral-graphs-6/Paper/porocilo.tex"
-(c:/Users/user/Documents/Faks/3. LETNIK/FP/Laplacian-integral-graphs-6/Paper/porocilo.tex
+**"c:/Users/user/Documents/Faks/3. LETNIK/FP/Laplacian-integral-graphs-7/Paper/porocilo.tex"
+(c:/Users/user/Documents/Faks/3. LETNIK/FP/Laplacian-integral-graphs-7/Paper/porocilo.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-07-04> (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -200,48 +200,64 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
  (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-c:/Users/user/Documents/Faks/3. LETNIK/FP/Laplacian-integral-graphs-6/Paper/porocilo.tex:81: Missing $ inserted.
+c:/Users/user/Documents/Faks/3. LETNIK/FP/Laplacian-integral-graphs-7/Paper/porocilo.tex:82: Missing $ inserted.
 <inserted text> 
                 $
-l.81 \begin{bmatrix}
+l.82 \begin{bmatrix}
                     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/user/Documents/Faks/3. LETNIK/FP/Laplacian-integral-graphs-6/Paper/porocilo.tex:88: Missing $ inserted.
+c:/Users/user/Documents/Faks/3. LETNIK/FP/Laplacian-integral-graphs-7/Paper/porocilo.tex:90: Missing $ inserted.
 <inserted text> 
                 $
-l.88 \end{bmatrix}
-                   \\
+l.90 \end{bmatrix}
+                  , \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<izjema1.png, id=7, 276.0714pt x 284.0211pt>
+[2]
+<primer_6.png, id=18, 261.6174pt x 281.1303pt>
+File: primer_6.png Graphic file (type png)
+<use primer_6.png>
+Package pdftex.def Info: primer_6.png  used on input line 93.
+(pdftex.def)             Requested size: 172.5pt x 185.37068pt.
+<izjema1.png, id=20, 266.6763pt x 281.1303pt>
 File: izjema1.png Graphic file (type png)
 <use izjema1.png>
-Package pdftex.def Info: izjema1.png  used on input line 92.
-(pdftex.def)             Requested size: 172.5pt x 177.4694pt.
-<izjema2.png, id=9, 266.6763pt x 281.1303pt>
+Package pdftex.def Info: izjema1.png  used on input line 98.
+(pdftex.def)             Requested size: 172.5pt x 181.84885pt.
+<izjema2.png, id=21, 276.0714pt x 284.0211pt>
 File: izjema2.png Graphic file (type png)
 <use izjema2.png>
-Package pdftex.def Info: izjema2.png  used on input line 93.
-(pdftex.def)             Requested size: 172.5pt x 181.84885pt.
-[2] [3 <./izjema1.png> <./izjema2.png>] (porocilo.aux) ) 
+Package pdftex.def Info: izjema2.png  used on input line 102.
+(pdftex.def)             Requested size: 172.5pt x 177.4694pt.
+
+Overfull \hbox (35.48488pt too wide) in paragraph at lines 95--109
+\T1/cmr/m/n/10 eno-ci-kli£ne grafe, nato pa sva s funk-cijo $\OML/cmm/m/it/10 unicyclic[]laplacian[]integer[]graph[]stohastic$
+ []
+
+[3 <./primer_6.png> <./izjema1.png> <./izjema2.png>]
+File: primer_6.png Graphic file (type png)
+<use primer_6.png>
+Package pdftex.def Info: primer_6.png  used on input line 114.
+(pdftex.def)             Requested size: 172.5pt x 185.37068pt.
+ [4] (porocilo.aux) ) 
 Here is how much of TeX's memory you used:
- 3908 strings out of 478338
- 60901 string characters out of 2837171
- 380362 words of memory out of 3000000
- 22308 multiletter control sequences out of 15000+600000
+ 3915 strings out of 478338
+ 61016 string characters out of 2837171
+ 379362 words of memory out of 3000000
+ 22314 multiletter control sequences out of 15000+600000
  476338 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,62p,301b,236s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 55i,10n,62p,301b,203s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on porocilo.pdf (3 pages, 142974 bytes).
+Output written on porocilo.pdf (4 pages, 156167 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
+ 212 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
