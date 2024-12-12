@@ -5,7 +5,7 @@
 \usepackage{amsmath, amssymb}
 \usepackage{amsthm}
 \usepackage{graphicx}
-
+\usepackage{caption}
 
 \newcommand{\program}{Finančna matematika} % ime studijskega programa: Matematika/Finančna matematika
 \newcommand{\imeavtorja}{Oskar Težak, Sara Šega} % ime avtorja
@@ -53,12 +53,14 @@ Definiramo Laplaceovo matriko $ L = D - A $, kjer je $D$ $ n \times n $ diagonal
 $A$ pa je $ n \times n $ matrika sosednosti. Lastne vrednosti matrike $L$ so $ \lambda_1 \leq \lambda_2 \leq \dots \leq \lambda_n .$ Če so vse lastne
 vrednosti pozitivne, pravimo, da je graf $G$ z matriko $L$ Laplaceov celoštevilski. 
 %Značilnosti
+\begin{comment}
+
 
 \section{Potek}
-Še dopisat.
-%Najprej sva napisala kodo za generiranje enocikličnih grafov, ki imajo relativno malo vozlišč. Uporabila sva dejstvo, da imajo povezani enociklični grafi enako
-%število povezav in vozlišč. Implementirala sva funkcijo, ki za vsak graf potem preveri, če je Laplaceov in Laplaceove tudi izriše. Funkcijo sva testirala
-%na grafih s 6, 7, 8, 9, 10 vozlišči. Za iskanje dvocikličnih grafov sva uporabila isto kodo, le da sva tokrat nastavila, da generirava grafe z $n$ vozlišči in $n+1$ povezavami.    
+
+Najprej sva napisala kodo za generiranje enocikličnih grafov, ki imajo relativno malo vozlišč. Uporabila sva dejstvo, da imajo povezani enociklični grafi enako
+število povezav in vozlišč. Implementirala sva funkcijo, ki za vsak graf potem preveri, če je Laplaceov in Laplaceove tudi izriše. Funkcijo sva testirala
+na grafih s 6, 7, 8, 9, 10 vozlišči. Za iskanje dvocikličnih grafov sva uporabila isto kodo, le da sva tokrat nastavila, da generirava grafe z $n$ vozlišči in $n+1$ povezavami.    
 
 \[
 \det(L - \lambda I) = 
@@ -72,7 +74,7 @@ vrednosti pozitivne, pravimo, da je graf $G$ z matriko $L$ Laplaceov celoštevil
     -1& &  &  &  & &1 - \lambda \\
 \end{vmatrix}
 \]
-
+\end{comment}
 \section{Generiranje enocikličnih Laplaceovih celoštevilskih grafov}
 Za generiranje povezanih enocikličnih grafov sva uporabila funkcijo $nauty$ $geng$ in dejstvo, da za povezane enociklične grafe velja, 
 da je njihovo število vozlišč enako številu povezav. S funkcijo $ is\_laplacian\_integer\_graph(G) $ sva potem preverjala, kateri izmed 
@@ -88,20 +90,30 @@ V splošnem bi njihova Laplaceova matrika bila $L=$
     &  &  &  &  &\ddots \\
     -1& &  &  &  & &1 \\
 \end{bmatrix}, \\
-njihov graf pa bi izgledal takole (za št. vozlišč = 6):
+njihov graf pa bi izgledal takole:
 
-\includegraphics[width=0.5\textwidth]{primer_6.png}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{primer_6.png}
+    \caption{Celoštevilski Laplaceov graf s 6 vozlišči}
+    \label{fig:izjema2}
+\end{figure}
 
-Izjema sta bila le grafa: \\
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{izjema1.png}
-    \end{minipage}%
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{izjema2.png}
-    \end{minipage}
-\\
+Izjema sta bila le grafa, ki sta imela vsa vozlišča vključena v cikel: \\
+\begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{izjema1.png}
+    \captionof{figure}{Graf s 4 vozlišči}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{izjema2.png}
+    \captionof{figure}{Graf s 6 vozlišči}
+\end{minipage}
+\par
+Opazko glede oblike sva želela preveriti v datoteki $shape\_hypotesis.ipynb$. Generirala sva enociklične grafe s centralnim vozliščem, in sicer tako, da sva v poljubnem ciklu 
+izbrala centralno vozlišče, nato pa dodajala vozlišča, ki so bila vsa povezana s centralnim vozliščem. Za generirane grafe sva preverila celoštevilskost lastnih vrednosti in 
+na podlagi najinih testiranj ugotovila, da hipoteza o takšni obliki velja le za enociklične grafe, ki imajo cikel dolžine 3. \\
 Za iskanje enocikličnih Laplaceovih celoštevilskih grafov z večjim številom vozlišč sva uporabila stohastično metodo. Najprej sva napisala funkcijo,
 ki generira enociklične grafe, nato pa sva s funkcijo $unicyclic\_laplacian\_integer\_graph\_stohastic$ preverila, kateri izmed njih so Laplaceovi celoštevilski. 
 Funkcijo sva testirala tako, da sva za grafe z 10 do 100 vozlišči generirala največ 10000 enocikličnih grafov in za te preverila, koliko je celoštevilskih Laplaceovih.
@@ -115,4 +127,7 @@ Laplaceovi. To funkcijo sva uporabila na grafih z majhnim številom vozlišč.
 Za večje grafe sva uporabila stohastično metodo, in sicer sva najprej generirala dvociklične grafe (ustvarimo
 2 poljubna cikla in ju potem povežemo), potem pa preverjamo, ali imajo celoštevilske lastne vrednosti. Zopet se je po testiranju izkazalo, da so celoštevilski
 Laplaceovi grafi redki, saj med dvocikličnimi grafi z 10 do 100 vozlišči, ni bilo nobenega.
+
+\section{Generiranje grafov s čim več celoštevilskih lastnih vrednosti}
+
 \end{document}
