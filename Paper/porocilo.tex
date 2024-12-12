@@ -15,7 +15,7 @@
 \newcommand{\imesomentorja}{prof. dr. Riste Škrekovski}
 \newcommand{\naslovdela}{Laplacian integral graphs}
 \newcommand{\letnica}{2024} %letnica 
-
+\newtheorem{primer}{Primer}
 
 \begin{document}
 
@@ -103,15 +103,17 @@ V splošnem bi njihova Laplaceova matrika bila $L=$
     \vdots& &  &  &1  &&  & \\
     &  &  &  &  &\ddots \\
     -1& &  &  &  & &1 \\
-\end{bmatrix}, \\
-njihov graf pa bi izgledal takole:
+\end{bmatrix}. \\
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{primer_6.png}
-    \caption{Celoštevilski Laplaceov graf s 6 vozlišči}
-    \label{fig:izjema2}
-\end{figure}
+\begin{primer}
+Enocikličen celoštevilski Laplaceov graf s 6 vozlišči. \\
+        \centering
+        \includegraphics[width=0.5\textwidth]{primer_6.png}
+        \caption{Celoštevilski Laplaceov graf s 6 vozlišči}
+       
+   
+\end{primer}
+
 
 Izjema sta bila le grafa, ki sta imela vsa vozlišča vključena v cikel: \\
 \begin{minipage}{0.5\textwidth}
@@ -135,13 +137,29 @@ Izkazalo se je, da ni bil nobeden.
 
 \section{Generiranje dvocikličnih Laplaceovih celoštevilskih grafov}
 Podobno kot pri enocikličnih grafih, sva tudi v tem primeru najprej ustvarila funkcijo, ki generira dvociklične grafe in jih potem testirala, če so celoštevilski 
-Laplaceovi. To funkcijo sva uporabila na grafih z majhnim številom vozlišč. 
+Laplaceovi. To funkcijo sva uporabila na grafih z majhnim številom vozlišč.  \\
+\begin{primer}
+    Za dvocikličen graf s 6 vozlišči obstajajo trije celoštevilski Laplaceovi grafi. \\
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{dvociklični1.png}
+    \end{minipage}
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{dvociklični2.png}
+    \end{minipage}
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{dvociklični3.png}
+    \end{minipage}
+    \par
+    
+\end{primer}
 
-\includegraphics[width=0.5\textwidth]{primer_6.png} \\
 Za večje grafe sva uporabila stohastično metodo, in sicer sva najprej generirala dvociklične grafe (ustvarimo
 2 poljubna cikla in ju potem povežemo), potem pa preverjamo, ali imajo celoštevilske lastne vrednosti. Zopet se je po testiranju izkazalo, da so celoštevilski
 Laplaceovi grafi redki, saj med dvocikličnimi grafi z 10 do 100 vozlišči, ni bilo nobenega.
 
-\section{Generiranje grafov s čim več celoštevilskih lastnih vrednosti}
+\section{Generiranje grafov, ki imajo čim več celoštevilskih lastnih vrednosti}
 
 \end{document}
