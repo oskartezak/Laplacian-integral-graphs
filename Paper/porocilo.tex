@@ -5,6 +5,7 @@
 \usepackage{amsmath, amssymb}
 \usepackage{amsthm}
 \usepackage{graphicx}
+\usepackage{comment}
 \usepackage{caption}
 
 \newcommand{\program}{Finančna matematika} % ime studijskega programa: Matematika/Finančna matematika
@@ -47,12 +48,24 @@ Ljubljana, december \letnica}
 Poiskati želimo čim več enocikličnih in dvocikličnih grafov, katerih Laplaceove lastne vrednosti so cela števila. 
 Za grafe nižjega reda to storimo z izčrpno metodo, za grafe višjega reda moramo uporabiti stohastično metodo. 
 Najti želimo metodo oz. vzorec za generiranje Laplaceovih celoštevilskih grafov. \\ 
-Naj bo $G(V,E)$ graf z množico vozlišč $V, \left| V \right| = n
-$ in množico povezav $E, \left| E \right| = m. $ \\
+Naj bo $G(V,E)$ graf z množico vozlišč $V$, $ \left| V \right| = n $
+in množico povezav $E$, $\left| E \right| = m. $ \\
 Definiramo Laplaceovo matriko $ L = D - A $, kjer je $D$ $ n \times n $ diagonalna matrika, katere diagonalni členi so stopnje vozlišč grafa $G$, 
-$A$ pa je $ n \times n $ matrika sosednosti. Lastne vrednosti matrike $L$ so $ \lambda_1 \leq \lambda_2 \leq \dots \leq \lambda_n .$ Če so vse lastne
+$A$ pa je $ n \times n $ matrika sosednosti. Elementi Laplaceove matrike $L$ so torej
+
+\[
+l_{i,j} = 
+\begin{cases} 
+    \deg(v_i), & \text{če } i = j, \\
+    -1, & \text{če } i \neq j \text{ in } v_i \text{ je soseden z } v_j, \\
+    0, & \text{sicer}.
+\end{cases}
+\]
+
+Lastne vrednosti matrike $L$ so $ \lambda_1 \leq \lambda_2 \leq \dots \leq \lambda_n .$ Če so vse lastne
 vrednosti pozitivne, pravimo, da je graf $G$ z matriko $L$ Laplaceov celoštevilski. 
-%Značilnosti
+
+
 \begin{comment}
 
 
