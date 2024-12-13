@@ -94,7 +94,7 @@ Za generiranje povezanih enocikličnih grafov sva uporabila funkcijo $nauty$ $ge
 da je njihovo število vozlišč enako številu povezav. S funkcijo $ is\_laplacian\_integer\_graph(G) $ sva potem preverjala, kateri izmed 
 enocikličnih grafov imajo celoštevilske Laplaceove lastne vrednosti. To sva uporabila na manjših grafih (do 10 vozlišč) in opazila, da so 
 Laplaceovi tisti, ki imajo eno centralno vozlišče, ki je del cikla, vsa vozlišča, ki niso del cikla, pa so tudi povezana s tem centralnim vozliščem. 
-V splošnem bi njihova Laplaceova matrika bila $L=$
+V splošnem bi njihova Laplaceova matrika bila: $L=$
 \begin{bmatrix}
     n-k  &-1  &-1 &&\dots&&   -1  \\
     -1 & 2  & -1&&&&  &    \\
@@ -105,6 +105,8 @@ V splošnem bi njihova Laplaceova matrika bila $L=$
     -1& &  &  &  & &1 \\
 \end{bmatrix}. \\
 
+
+\newpage
 \begin{primer}
 Enocikličen celoštevilski Laplaceov graf s 6 vozlišči. \\
         \centering
@@ -161,5 +163,31 @@ Za večje grafe sva uporabila stohastično metodo, in sicer sva najprej generira
 Laplaceovi grafi redki, saj med dvocikličnimi grafi z 10 do 100 vozlišči, ni bilo nobenega.
 
 \section{Generiranje grafov, ki imajo čim več celoštevilskih lastnih vrednosti}
+Kot je jasno razvidno iz iskanja celoštevilskih Laplacovih grafov so le ti precej redki. 
+Ker pa so grafi takšne oblike zaželjeni sva se lotila iskanja grafov s čim večjim številom 
+celoštevilskih lastnih vrednosti. Problema sva se lotila z metodo naključnega dodajanja in odstranjevanja
+povezav med vozslišči, začenši z nekim naključnim enocikličnim grafom. Ker gre zopet za stohastičen proces
+algoritem ne konvergira vedno (oz zelo malokrat) k grafu z samimi celoštevilskimi lastnimi vrednostmi. Je pa 
+precej dober prikaz kako lahko konstruiramo grafe željene oblike.
+
+\newpage
+
+\begin{primer}
+    Konvergenca algoritma na 11 vozliščih. \\
+            \centering
+            \includegraphics[width=0.8\textwidth]{primer7.png}
+            \caption{Celoštevilski Laplaceov graf s 6 vozlišči}
+           
+       
+    \end{primer}
+
+
+\section{Rezultati}
+
+Celoštevilski Laplacovi grafi so prisotni na mnogih področij od teorije grafov, kemije, fizike do strojnega učenja.
+V nalogi sva raziskala obnašanja teh grafov, kako in v kakšnih vzorcih se pojavlajjo.
+Izkaže se, da je grafov, ki bi imeli same celoštevilske lastne vrednosti malo, lahko pa precej enostavno konstruiramo
+take grafe, ki bi imeli čim več takih lastnih vrednosti. Vse algoritme torej postopke in dokaze zgoraj omenjenih ugotovitev 
+lahko najdemo na https://github.com/oskartezak/Laplacian-integral-graphs/tree/main.
 
 \end{document}
